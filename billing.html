@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity | Secure your future</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/c424bb238c.js" crossorigin="anonymous"></script>    
+    <!-- Costume css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/billing.css">
+    <!-- <link rel="stylesheet" href="css/secondary.css"> -->
+</head>
+<body>
+
+    <!-- nav bar  -->
+
+    <div class="m">
+        <header>
+            <a href="index.html" ><img src="img/logo.png" alt="" class="logo"></a>
+            <input type="checkbox" id="menu-bar">
+            <label for="menu-bar"> <i class="fas fa-bars" ></i> </label>
+            <nav class="navigation">
+                 <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="contact.html">Contact</a>
+                <ul>
+                      <li><a href="#">Billing</a></li>
+                </ul>
+                </li>
+                      <li><a href="#">Programs </a>
+                      <ul>
+                           <li><a href="bba.html">BBA</a></li>
+                           <li><a href="bit.html">BIT</a></li>
+                      </ul>
+                      </li>
+                 </ul>
+         </nav>
+       </header>
+    </div>
+
+    
+     <div class="container"> 
+        <div class="onlinepayment">
+            <div class="formbox">
+                <div class="button">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="inquiry()">Bill Inquiry</button>
+                    <button type="button" class="toggle-btn" onclick="pay()">Pay</button>
+                </div>
+                <form action="" id="inquiry" class="input-group">
+                    <input type="text" class="input-field" placeholder="User ID">
+                    <button type="submit">Enquiry</button>
+                </form>
+                <form action="" id="pay" class="input-group">
+                    <input type="number" class="input-field" placeholder="Esewa ID">
+                    <input type="number" class="input-field" placeholder="User ID">
+                    <input type="number" class="input-field" placeholder="User ID">
+                    <button type="submit">Proceed</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+
+<!-- FOOTER -->
+<div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <p class="mt-5 mb-5"> All right reserved by Trinity College &copy 2022
+          </p>
+        </div>
+        <div class="col">
+          <div class="mt-5 mb-5 text-center">
+            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fab fa-linkedin fa-2x"></i>
+            <i class="fab fa-instagram fa-2x"></i>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+<!-- nav bar  -->
+<script>
+    var x = document.getElementById("inquiry");
+    var y = document.getElementById("pay");
+    var z = document.getElementById("btn");
+
+
+    function pay(){
+        x.style.left = "-450px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+    }
+    function inquiry(){
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+    }
+</script>
+
+</body>
+</html>
