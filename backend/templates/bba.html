@@ -1,0 +1,170 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity | Secure your future</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/c424bb238c.js" crossorigin="anonymous"></script>    
+    <!-- Costume css -->
+    <link rel="stylesheet" href="{% static 'style/style.css'%}">
+    <link rel="stylesheet" href="{% static 'style/program.css'%}">
+    <!-- <link rel="stylesheet" href="css/secondary.css"> -->
+</head>
+<body>
+
+    <!-- nav bar  -->
+
+    <div class="m">
+      <header>
+        <a  href="{% url 'home'%}" ><img src="{% static 'img/logo.png' %}" alt="" class="logo"></a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar"> <i class="fas fa-bars" ></i> </label>
+        <nav class="navigation">
+             <ul>
+                  <li><a  href="{% url 'home'%}">Home</a></li>
+                  <li><a href="{% url 'about'%}">About</a></li>
+                  
+                  <li><a href="{% url 'contact'%}">Contact</a>
+                  <ul>
+                       <li><a href="">Bill</a></li>
+                  </ul></li>
+                  <li><a href="#">Programs </a>
+                  <ul>
+                       <li><a href="{% url 'bba'%}">BBA</a></li>
+                       <li><a href="{% url 'bit'%}">BIT</a></li>
+                  </ul>
+                  </li>
+             </ul>
+     </nav>
+   </header>
+  </div>
+
+    <!-- Programmes -->
+   <div class="container mb-5">
+    <div class="row pgm">
+        <div class="col-lg-6 col-md-12">
+            <a href="bba.html" >
+                <img src="{% static 'img/BBA.png'%}" alt="" class="rounded mx-auto d-block mb-5">
+            </a>
+        </div>
+        <div class="col-lg-6 col-md-12">
+              <h5>Bachelor In Business Administration</h5>
+              <p>
+                International Business has been the major phenomena to increase the knowledge and expertise worldwide.
+                Organisations are going beyond boundaries to compete in the international market.
+                 These organisations need experts who can devise international strategies to work across 
+                 multicultural barriers. This programme covers most important topics in international business, 
+                 including emerging markets, globalisation, the role of trust, and comparing markets and business 
+                 environments in different countries. As well as building an understanding of multinational companies 
+                 and their strategies, you will explore how local companies can adapt these entrepreneurial and innovative
+                  manners to create an economic growth both inside and outside the nation.
+              </p>
+         </div>
+    </div>
+  </div>
+
+  <div class="container m">
+    <div class="row">
+      <div class="col">
+        <div class="course">
+          <h5> Course Structure</h5>
+         <div class="year">
+             <input type="checkbox" id="year1">
+             <label for="year1"> <h6> Year 1 / Level 3</h6> </label>
+             <div class="module1">                    
+                   <li>3GK012: Preparing for Succcess at University</li>  
+                   <li>3GK013: Project-Based Learning</li>
+                   <li>3BU003: Principles of Business</li>
+                   <li>3BU002: 21st Century Management</li>
+             </div>
+         </div>
+
+         <div class="year">
+           <input type="checkbox" id="year2">
+           <label for="year2"> <h6>  Year 2 / Level 4</h6> </label>
+           <div class="module2">                    
+             <li> 4IB004: Business in a Global Context</li>
+             <li>4MK007: Principles of Marketing</li>
+            <li> 4MK006: Introduction to Brand Communication</li>
+            <li> 4HR002: Introduction to People at work</li>
+            <li> 4AC013: Financial Management</li>
+            <li> 4HR017: Diversity Management in a Global Context</li>
+           </div>
+       </div>
+
+       <div class="year">
+         <input type="checkbox" id="year3">
+         <label for="year3"> <h6>  Year 3 / Level 5</h6> </label>
+         <div class="module3">                    
+           <li> 5FC003: International Financial Institutions and Market</li>
+           <li> 5IB004: Economics of Managerial Decision-Making</li>
+           <li> 5IB005: Contemporary Issues in IBM</li>
+           <li> 5BU010: Digital Business and Innovation</li>
+           <li> 5BU012: Operations and Supply Management</li>
+           <li> 5HR006: International Human Resources – The Key Issues</li>
+         </div>
+     </div>
+
+     <div class="year">
+       <input type="checkbox" id="year4">
+       <label for="year4"> <h6>   Year 4 / Level 6</h6> </label>
+       <div class="module4">                    
+         <li> 6IB003: Dynamics of Multinational Companies</li>
+         <li> 6IB006: Debating Globalisation</li>
+         <li> 6IB011: Business Research Methods</li>
+         <li> 6MK001: International Marketing</li>
+         <li> 6BE003: Strategic Management</li>
+         <li> 6BU013: Independent Project</li>
+       </div>
+   </div>
+      </div>
+      </div>
+      <!-- <div class="col">
+        <h6> Entry Requirement </h6>
+      </div> -->
+    </div>
+  </div>
+
+
+ 
+<!-- FOOTER -->
+<div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <p class="mt-5 mb-5"> All right reserved by Trinity College &copy 2022
+          </p>
+        </div>
+        <div class="col">
+          <div class="mt-5 mb-5 text-center">
+            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fab fa-linkedin fa-2x"></i>
+            <i class="fab fa-instagram fa-2x"></i>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>

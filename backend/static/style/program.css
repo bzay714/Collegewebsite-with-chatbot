@@ -1,0 +1,52 @@
+.pgm img{
+    width: 300px;
+    height: inherit;
+}
+.course input{
+    display: none;
+}
+.course h5{
+    padding:20px;
+}
+.year h6,.req1 h6{
+    cursor: pointer;
+    padding: 10px 10px 10px 20px;
+}
+.module1, .module2, .module3, .module4, .des1{
+    display: none;
+    padding-left: 20px;
+}
+/* .des1 li{
+    margin-bottom: 10px;
+} */
+.module1 li, .module2 li, .module3 li, .module4 li{
+    padding: 5px;
+}
+#year1:checked ~ .module1{
+    display: block;
+}
+#year2:checked ~ .module2{
+    display: block;
+}
+#year3:checked ~ .module3{
+    display: block;
+}
+#year4:checked ~ .module4{
+    display: block;
+}
+/* #r1:checked ~ .des1{
+    display: block;
+} */
+.year, .req1{
+    background: #eee;
+    box-shadow: 0 5px 10px rgba(0, 0, 0,.2);
+}
+.req p{
+    margin-top: 5px;
+}
+
+/* @media (max-width:991px){
+    .req{
+        padding-left: 0;
+    }
+} */

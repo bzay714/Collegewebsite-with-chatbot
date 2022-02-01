@@ -1,0 +1,31 @@
+img{
+    width: 500px;
+    height: auto;
+}
+.why {
+    border: 2px solid #f0f0f0;
+    padding: 5em 3em;
+    border-radius: 5%;
+  }
+.why:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+.pgm img{
+    width: 300px;
+    height: inherit;
+}
+@media only screen and (max-width: 500px) {
+    img{
+        width: 350px;
+        height: auto;
+    }
+
+  }
+  @media only screen and (max-width: 320px) {
+    img{
+        width: 290px;
+        height: auto;
+    }
+
+  }

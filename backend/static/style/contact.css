@@ -1,0 +1,109 @@
+.box{
+    width: 50%;
+    display: block;
+    padding: 20px 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.icon{
+    min-width: 60px;
+    height: 60px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+    font-size: 22px;
+}
+.icon i{
+    margin-bottom: 22px;
+    color: aliceblue;
+}
+.text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.form{
+    width: 450px;
+    padding: 40px; 
+    border-radius: 20px;
+    background-color: #252020;
+  }
+  .form label{
+      color:white ;
+  }
+  .form h2{
+    color: white;
+    font-size: 2em;
+    padding-bottom: 10px;
+  }
+  .form input[type="text"]{
+    background: none;
+    display: block;
+    margin-bottom :20px;
+    color: white;
+    border: none;
+    border-bottom: solid 1px;
+    border-radius: 0px;
+  }
+  .form input[type="email"]{
+    background: none;
+    display: block;
+    margin-bottom :20px ;
+    color: white;
+    border: none;
+    border-bottom: solid 1px;
+    border-radius: 0px;
+  } 
+  .form button{
+    display: block;
+    margin :20px auto;
+    text-align:center;
+    padding: 14px 40px;
+    background-color: white;
+    outline: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .desc {
+    margin-right: 100px;
+  }
+  /* .form button::after{
+  height: 100%;
+  left: -35%;
+  top: 0;
+  transform: skew(50deg);
+  transition-duration: 0.6s;
+  transform-origin: top left;
+  width: 0;
+  } 
+  .form button:hover{
+    box-shadow: inset -10.5em 0 0 0 #ff96ad, inset 10.5em 0 0 0 #ff96ad;
+  }
+.form button:hover{
+   background: white;
+   box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 200px white;
+ } */
+
+
+  @media only screen and (max-width: 641px){
+  .form{
+      border-radius: 0;
+      padding: 2em;
+      max-width: 100%;
+      max-height: 100%;
+      width: inherit;
+      height: inherit;
+  }
+  .box{
+    width: 50%;
+    display: block;
+    padding: 20px 0;
+    margin-left: 50px;
+    margin-top: 0;
+}
+
+}  
