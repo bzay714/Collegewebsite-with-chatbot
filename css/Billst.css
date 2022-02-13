@@ -1,0 +1,23 @@
+body{
+    font-family: TimesNewRoman;
+}
+.logo{
+    width: 200px; 
+    height: 88.2px; 
+    margin-right: 20px;
+}
+.container h3{
+    font-size: 48px;
+}
+.khalti{
+    width: 300px;
+    height: 124.43px;
+}
+button{
+    width: 212px;
+    height: 64px;
+    border-radius: 20px;
+    background-color: #5C2D91;
+    color: White;
+    font-size: 18px;
+}

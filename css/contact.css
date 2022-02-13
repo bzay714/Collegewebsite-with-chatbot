@@ -68,6 +68,9 @@
     transition: 0.25s;
     cursor: pointer;
   }
+  .desc p{
+    margin-right: 100px;
+  }
   /* .form button::after{
   height: 100%;
   left: -35%;
@@ -102,4 +105,5 @@
     margin-left: 50px;
     margin-top: 0;
 }
+
 }  

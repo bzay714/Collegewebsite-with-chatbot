@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/c424bb238c.js" crossorigin="anonymous"></script>    
     <!-- Costume css -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/billing.css">
+    <link rel="stylesheet" href="css/contact.css">
     <!-- <link rel="stylesheet" href="css/secondary.css"> -->
 </head>
 <body>
@@ -27,10 +27,9 @@
                       <li><a href="index.html">Home</a></li>
                       <li><a href="about.html">About</a></li>
                       <li><a href="contact.html">Contact</a>
-                <ul>
-                      <li><a href="#">Billing</a></li>
-                </ul>
-                </li>
+                      <ul>
+                           <li><a href="khalti.html">Bill</a></li>
+                      </ul></li>
                       <li><a href="#">Programs </a>
                       <ul>
                            <li><a href="bba.html">BBA</a></li>
@@ -43,55 +42,56 @@
     </div>
 
     
-     <div class="container"> 
-        <div class="onlinepayment">
-            <div class="formbox">
-                <div class="button">
-                    <div id="btn"></div>
-                    <button type="button" class="toggle-btn" onclick="inquiry()">Bill Inquiry</button>
-                    <button type="button" class="toggle-btn" onclick="pay()">Pay</button>
-                </div>
-                <form action="" id="inquiry" class="input-group">
-                    <input type="text" class="input-field" placeholder="User ID">
-                    <button type="submit">Enquiry</button>
-                </form>
-                <form action="" id="pay" class="input-group">
-                    <input type="number" class="input-field" placeholder="Esewa ID">
-                    <input type="number" class="input-field" placeholder="User ID">
-                    <input type="number" class="input-field" placeholder="User ID">
-                    <button type="submit">Proceed</button>
-                </form>
+    <div class="container m">
+        <div class="row">
+            <h1 class="text-center mb-5"> Know Your Bill (For student) </h1>
+            <div class="col" >
+                <h5>Description</h5>
+                <p class="desc"> This section is only for the students. Students can know their due bill amount. You just need to Input the Student Id provided by the college in the field 
+                    and you will be provided with the detailed Bill Statement.</p>
+            </div>
+
+            <div class="col">
+                <div class="form">
+                    
+                    <form method="POST">
+                         <h2>Know Your Bill</h2>
+                         <label for=""> Student ID</label>
+                         <input type="text" name="StudentId" class="form-control" required="">
+                         <input type="submit" value="Inquiry">
+                    </form> 
+                    
             </div>
         </div>
     </div>
-
+    </div>
     
 
 <!-- FOOTER -->
 <div>
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <p class="mt-5 mb-5"> All right reserved by Trinity College &copy 2022
-          </p>
-        </div>
-        <div class="col">
-          <div class="mt-5 mb-5 text-center">
-            <i class="fab fa-facebook fa-2x"></i>
-            <i class="fab fa-linkedin fa-2x"></i>
-            <i class="fab fa-instagram fa-2x"></i>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <p class="mt-5 mb-5"> All right reserved by Trinity College &copy 2022
+            </p>
           </div>
-          
-          
-          
+          <div class="col">
+            <div class="mt-5 mb-5 text-center">
+              <i class="fab fa-facebook fa-2x"></i>
+              <i class="fab fa-linkedin fa-2x"></i>
+              <i class="fab fa-instagram fa-2x"></i>
+            </div>
+            
+            
+            
+          </div>
         </div>
+        
+        
       </div>
-      
-      
-    </div>
-  </footer>
-</div>
+    </footer>
+  </div>
 
 
 
@@ -102,21 +102,19 @@
 
 <!-- nav bar  -->
 <script>
-    var x = document.getElementById("inquiry");
-    var y = document.getElementById("pay");
-    var z = document.getElementById("btn");
+    var menulist = document.getElementById("menulist");
 
+    menulist.style.maxHeight = "0px";
 
-    function pay(){
-        x.style.left = "-450px";
-        y.style.left = "50px";
-        z.style.left = "110px";
-    }
-    function inquiry(){
-        x.style.left = "50px";
-        y.style.left = "450px";
-        z.style.left = "0px";
-    }
+    function menu() {
+        if (menulist.style.maxHeight == "0px") {
+            menulist.style.maxHeight = "200px";
+        }
+        else {
+            menulist.style.maxHeight = "0px";
+        }
+    
+}
 </script>
 
 </body>

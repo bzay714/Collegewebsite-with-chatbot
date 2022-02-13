@@ -1,4 +1,23 @@
-
+/* Go back to top */
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: TimesNewRoman;
+}
+.gotopbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: none;
+  bottom: -10px;
+  right: 10px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: black;
+  font-size: 22px;
+}
 
 /* nav */
 header{
@@ -146,6 +165,7 @@ header .navigation ul li:hover >ul{
 
 
 /* register */
+
 .entry-form{
   width: 450px;
   padding: 40px; 
@@ -191,6 +211,25 @@ header .navigation ul li:hover >ul{
   transition: 0.25s;
   cursor: pointer;
 }
+
+/* message */
+
+.messages li{
+  text-decoration: none !important;
+  width: fit-content;
+}
+.regsuc{
+  color:white;
+  border: solid #078E43 ;
+  border-radius: 20px;
+  background: #078E43 ;
+  padding: 10px;
+  margin-left: 70px;
+  text-align: center;
+  display: block;
+}
+
+
 /* register table responsive */
 @media only screen and (max-width: 500px){
   .entry-form{
@@ -201,7 +240,9 @@ header .navigation ul li:hover >ul{
     width: inherit;
     height: inherit;
 }
-
+.regsuc{
+  margin-left:50px;
+}
 }
 
 
