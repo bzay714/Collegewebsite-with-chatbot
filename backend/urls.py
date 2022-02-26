@@ -11,4 +11,12 @@ urlpatterns = [
     path('contact/',views.contact,name='contact'),
     path('bba/',views.bba,name='bba'),
     path('bit/',views.bit,name='bit'), 
+    path('inquiry/',views.inquiry,name='inquiry'),  
+    path('info/<str:id>/',views.info,name='info'),  
+    path('api/khalti_payment',views.khalti,name='verify_payment') 
 ]
+
+
+if settings.DEBUG:
+        urlpatterns += static(settings.MEDIA_URL,
+                              document_root=settings.MEDIA_ROOT)

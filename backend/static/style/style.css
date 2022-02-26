@@ -1,5 +1,7 @@
 
-
+body{
+  font-family: TimesNewRoman;
+}
 /* nav */
 header{
   position: fixed;
