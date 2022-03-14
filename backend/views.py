@@ -89,3 +89,7 @@ def khalti(request):
    pp.pprint(response_data)
    
    return JsonResponse(f"Payment Success !! . {response_data['user']['idx']}",safe=False)
+
+
+def login(request):
+    return render(request, "login_temp.html")

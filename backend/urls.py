@@ -13,7 +13,8 @@ urlpatterns = [
     path('bit/',views.bit,name='bit'), 
     path('inquiry/',views.inquiry,name='inquiry'),  
     path('info/<str:id>/',views.info,name='info'),  
-    path('api/khalti_payment',views.khalti,name='verify_payment') 
+    path('api/khalti_payment',views.khalti,name='verify_payment'),
+    path('ad/',views.login,name="login")
 ]
 
 
