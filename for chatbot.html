@@ -12,7 +12,13 @@
     <script src="https://kit.fontawesome.com/c424bb238c.js" crossorigin="anonymous"></script>    
     <!-- Costume css -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/teacher.css"> 
+    <!-- <link rel="stylesheet" href="css/teacher.css">  -->
+    <link rel="stylesheet" href="css/chatbot.css"> 
+    <!-- ChatBot -->
+     <link rel="stylesheet" type="text/css" href="css/convForm.css">
+     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+     <script type="text/javascript" src="js/jquery.convForm.js"></script>
+     <script type="text/javascript" src="js/chatbot.js"></script>
 </head>
 <body>
 
@@ -204,22 +210,21 @@
      <h1 class="text-center mb-5"> Teachers </h1>
      <div class="row m">
           <div class="col" id="teac">
-            <div class="text-center">
                <img src="img/author-image1.jpg" alt="" >
                <p class="mt-3"> <b>HARDIN SCOTT</b> <br> Data Scientist at Youtube <br> 8 Years of Teaching experience</p>
-               </div>
+               
+               
           </div>
           <div class="col" id="teac">
-              <div class="text-center">
                <img src="img/author-image2.jpg" alt="" >
                <p class="mt-3"><b>TESSA YOUNG</b> <br>Information security engineer at Google <br>5 Years of Teaching experience</p>
-               </div>
+               
+               
           </div>
           <div class="col" id="teac">
-            <div class="text-center">
                <img src="img/author-image4.jpg" alt="" >
                <p class="mt-3"><b>JHON WICK</b><br>Java Developer  <br>8 Years of working experience</p>
-             </div>  
+               
           </div>
      </div>
      
@@ -251,20 +256,56 @@
   </footer>
 </div>
 
-<a href="#" class="gotopbtn display"><i class="fas fa-arrow-up"></i></a>
+<!-- <a href="#" class="gotopbtn"><i class="fas fa-arrow-up"></i></a> -->
 
 
 
+
+<!-- ChatBot -->
+<div class="chat_icon">
+	<i class="fa fa-comments" aria-hidden="true"></i>
+</div>
+
+<div class="chat_box">
+	<div class="my-conv-form-wrapper">
+		<form action="" method="GET" class="hidden">
+
+      <select data-conv-question="Hello! How can I help you" name="category">
+        <option value="WebDevelopment">Website Development ?</option>
+        <option value="DigitalMarketing">Digital Marketing ?</option>
+      </select>
+
+      <div data-conv-fork="category">
+        <div data-conv-case="WebDevelopment">
+          <input type="text" name="domainName" data-conv-question="Please, tell me your domain name">    
+        </div>
+        <div data-conv-case="DigitalMarketing" data-conv-fork="first-question2">
+          <input type="text" name="companyName" data-conv-question="Please, enter your company name"> 
+        </div>
+      </div>
+
+      <input type="text" name="name" data-conv-question="Please, Enter your name">
+
+      <input type="text" data-conv-question="Hi {name}, <br> It's a pleasure to meet you." data-no-answer="true">
+
+      <input data-conv-question="Enter your e-mail" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" name="email" required placeholder="What's your e-mail?">
+
+      <select data-conv-question="Please Conform">
+        <option value="Yes">Conform</option>
+      </select>
+
+  	</form>
+	</div>
+</div>
+<!-- ChatBot end -->
 
 
 <!-- JavaScript -->
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<!-- <script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/owl.carousel.min.js"></script> -->
-<script src="js/top.js"></script>
+<!-- <script src="js/chatbot.js"></script> 
+<script src="js/jquery.convForm.js"></script>  -->
 
 <!-- nav bar  -->
 <script>
@@ -281,6 +322,8 @@
         }
     
 }
+
+
 </script>
 
 </body>

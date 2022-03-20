@@ -5,7 +5,19 @@ html{
 body{
   font-family: TimesNewRoman;
 }
+
+.hide {
+  display: none;
+}
+.show {
+ display: block;
+}
+.display {
+  display: none;
+}
+
 .gotopbtn{
+ 
   position: fixed;
   width: 50px;
   height: 50px;
@@ -115,6 +127,7 @@ header .navigation ul li:hover >ul{
 .feature-thumb {
   border: 2px solid #f0f0f0;
   padding: 5em 3em;
+  height: 550px;
 }
 
 .feature-thumb span {
@@ -254,9 +267,7 @@ header .navigation ul li:hover >ul{
   margin-left: auto;
   margin-right: auto;
 }
-#teac p{
-  margin-left: 100px;
-}
+
 
 #teac p b{
   font-size: 30px
@@ -273,6 +284,7 @@ header .navigation ul li:hover >ul{
 footer{
   background-color: #E5E5E5;
 }
+
 
 
 
@@ -307,7 +319,9 @@ footer{
     .carousel-item {
       margin-top: auto;
     }
-    
+    .feature-thumb{
+      height: auto;
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -327,7 +341,9 @@ footer{
     header .navigation ul li a{
       padding:5px 20px 5px 20px; 
     }
-
+    .feature-thumb{
+      height: auto;
+    }
   }
   @media only screen and (max-width: 330px) {
     .entry-form{
@@ -338,7 +354,9 @@ footer{
       width: inherit;
       height: inherit;
   }
-
+   .feature-thumb{
+     height: auto;
+   }
   }
   @media only screen and (max-width: 1024px) {
     .entry-form{
