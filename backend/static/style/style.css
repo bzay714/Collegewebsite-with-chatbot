@@ -5,6 +5,18 @@ html{
 body{
   font-family: TimesNewRoman;
 }
+
+.hide {
+  display: none;
+}
+.show {
+ display: block;
+}
+
+.display {
+  display: none;
+}
+
 .gotopbtn{
   position: fixed;
   width: 50px;
@@ -224,6 +236,16 @@ header .navigation ul li:hover >ul{
   border: solid #078E43 ;
   border-radius: 20px;
   background: #078E43 ;
+  padding: 10px;
+  margin-left: 70px;
+  text-align: center;
+  display: block;
+}
+.regerr{
+  color:white;
+  border: solid red ;
+  border-radius: 20px;
+  background: red ;
   padding: 10px;
   margin-left: 70px;
   text-align: center;

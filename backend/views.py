@@ -1,28 +1,45 @@
 from django.shortcuts import render
-from .models import Joinus
 from django.contrib import messages
 from django.http import HttpResponseRedirect,HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 import json
 import requests
-from .models import Bill, Teacher
+from .models import *
 from django.contrib import messages
 
 # Create your views here.
+# def home(request):
+#     data= Teacher.objects.all()
+#     if request.method == "POST":
+#         Fullname=request.POST['Fullname']
+#         Email=request.POST['Email']
+#         Contact=request.POST['Contact']
+#         join=Joinus(Fullname=Fullname, Email=Email,Contact=Contact)
+#         join.save()
+#         messages.success(request, "Successfully Added")
+#         return HttpResponseRedirect("/",{'data':data})
+#     else:
+#         return render(request , "index.html",{'data':data})
+
+
 def home(request):
-    data= Teacher.objects.all()
     if request.method == "POST":
         Fullname=request.POST['Fullname']
         Email=request.POST['Email']
         Contact=request.POST['Contact']
-        join=Joinus(Fullname=Fullname, Email=Email,Contact=Contact)
-        join.save()
-        messages.success(request, "Successfully Added")
-        return HttpResponseRedirect("/",{'data':data})
+        form=Joinus(request.POST)
+        check=Joinus.objects.filter(Email=Email)
+        if check:
+            messages.error(request, "Email already registered.")
+            return HttpResponseRedirect("/")
+        else:
+            join=Joinus(Fullname=Fullname, Email=Email,Contact=Contact)
+            join.save()
+            messages.success(request, "Successfully Added")
+            return HttpResponseRedirect("/")
     else:
-        return render(request , "index.html",{'data':data})
-
+        return render(request , "index.html")
 
 def about(request):
     return render(request, 'about.html')
@@ -91,5 +108,32 @@ def khalti(request):
    return JsonResponse(f"Payment Success !! . {response_data['user']['idx']}",safe=False)
 
 
+# def login(request):
+#     return render(request, "login_temp.html")
+
 def login(request):
-    return render(request, "login_temp.html")
+    if request.method == "POST":
+        username = request.POST["username"]
+        password = request.POST["password"]
+        user = users.authenticate(username=username, password=password)
+        if user is not None:
+            users.login(request, user)
+            return redirect("/register/")
+        else:
+            messages.error(request, "Invalid Credentials. Try Again Please!")
+            return redirect("/ad/")
+
+    else:
+        return render(request, "login_temp.html")
+
+
+def registration(request):
+    data=Joinus.objects.all()
+    return render(request , "registration.html",{'data':data})
+
+def deleteReg(request,id):
+    if request.method =="POST":
+        regId = Joinus.objects.get(pk=id)
+        regId.delete()
+        messages.error(request, "Successfully Deleted")
+        return HttpResponseRedirect("/register/")

@@ -14,6 +14,8 @@ urlpatterns = [
     path('inquiry/',views.inquiry,name='inquiry'),  
     path('info/<str:id>/',views.info,name='info'),  
     path('api/khalti_payment',views.khalti,name='verify_payment'),
+    path('register/',views.registration,name='registration'),
+    path('deleteReg/<int:id>/', views.deleteReg,name="deleteReg"),
     path('ad/',views.login,name="login")
 ]
 
