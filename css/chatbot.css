@@ -1,16 +1,14 @@
 /* Button used to open the chat form - fixed at the bottom of the page */
   .open-button {
-	background-color: #555;
-	color: white;
+	background-color: none;
 	padding: 16px 20px;
 	border: none;
-	border-radius: 50%;
-	cursor: pointer;
+	border-radius: 55%;
 	opacity: 0.8;
+	cursor: pointer;
 	position: fixed;
 	bottom: 23px;
 	right: 28px;
-	/* width: 280px; */
   }
 
   /* The popup chat - hidden by default */
