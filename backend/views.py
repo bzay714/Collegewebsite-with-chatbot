@@ -19,18 +19,6 @@ from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
 
 # Create your views here.
-# def home(request):
-#     data= Teacher.objects.all()
-#     if request.method == "POST":
-#         Fullname=request.POST['Fullname']
-#         Email=request.POST['Email']
-#         Contact=request.POST['Contact']
-#         join=Joinus(Fullname=Fullname, Email=Email,Contact=Contact)
-#         join.save()
-#         messages.success(request, "Successfully Added")
-#         return HttpResponseRedirect("/",{'data':data})
-#     else:
-#         return render(request , "index.html",{'data':data})
 
 
 def home(request):
@@ -121,35 +109,17 @@ def khalti(request):
 # def login(request):
 #     return render(request, "login_temp.html")
 
-def login(request):
-    if request.method == "POST":
-        username = request.POST["username"]
-        password = request.POST["password"]
-        user = users.authenticate(username=username, password=password)
-        if user is not None:
-            users.login(request, user)
-            return redirect("/register/")
-        else:
-            messages.error(request, "Invalid Credentials. Try Again Please!")
-            return redirect("/ad/")
 
-    else:
-        return render(request, "login_temp.html")
+# def registration(request):
+#     data=Joinus.objects.all()
+#     return render(request , "registration.html",{'data':data})
 
-def chatbot(request):
-    return render(request, "chatbot.html")
-
-
-def registration(request):
-    data=Joinus.objects.all()
-    return render(request , "registration.html",{'data':data})
-
-def deleteReg(request,id):
-    if request.method =="POST":
-        regId = Joinus.objects.get(pk=id)
-        regId.delete()
-        messages.error(request, "Successfully Deleted")
-        return HttpResponseRedirect("/register/")
+# def deleteReg(request,id):
+#     if request.method =="POST":
+#         regId = Joinus.objects.get(pk=id)
+#         regId.delete()
+#         messages.error(request, "Successfully Deleted")
+#         return HttpResponseRedirect("/register/")
 
 
 

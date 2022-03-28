@@ -11,9 +11,4 @@ class Bill(models.Model):
     StdiD =  models.CharField(max_length=70, primary_key=True)
     Amt = models.FloatField(null=True)
 
-class Teacher(models.Model):
-    img = models.FileField(upload_to="media/")
-    Fullname =  models.CharField(max_length=70)
-    Expertise =  models.CharField(max_length=70)
-    Exp =  models.CharField(max_length=70)
     
