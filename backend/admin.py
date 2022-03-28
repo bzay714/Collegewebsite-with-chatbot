@@ -10,4 +10,4 @@ class AdminJoinus(admin.ModelAdmin):
 
 @admin.register(Bill)
 class AdminBill(admin.ModelAdmin):
-    list_display = ['Fullname','StdiD','Amt']
+    list_display = ['Fullname','StdiD','Amt','Section','Address']
