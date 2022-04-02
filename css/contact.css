@@ -39,16 +39,8 @@
     font-size: 2em;
     padding-bottom: 10px;
   }
-  .form input[type="text"]{
-    background: none;
-    display: block;
-    margin-bottom :20px;
-    color: white;
-    border: none;
-    border-bottom: solid 1px;
-    border-radius: 0px;
-  }
-  .form input[type="email"]{
+  
+  .form input{
     background: none;
     display: block;
     margin-bottom :20px ;
@@ -67,7 +59,8 @@
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
-  }
+    font-weight: 700;
+   }
   .desc p{
     margin-right: 100px;
   }
