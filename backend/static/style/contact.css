@@ -24,6 +24,16 @@
     margin-left: 20px;
     font-size: 16px;
 }
+/* Modal */
+.modal-content{
+  background: #252020;
+}
+.modal-header, .modal-footer{
+  border: none;
+}
+.modal-title{
+  color: white;
+}
 
 .form{
     width: 450px;
@@ -39,7 +49,17 @@
     font-size: 2em;
     padding-bottom: 10px;
   }
-  .form input[type="text"]{
+
+  .form input{
+    background: none;
+    display: block;
+    margin-bottom :20px;
+    color: white;
+    border: none;
+    border-bottom: solid 1px;
+    border-radius: 0px;
+  }
+  /* .form input[type="text"]{
     background: none;
     display: block;
     margin-bottom :20px;
@@ -57,6 +77,15 @@
     border-bottom: solid 1px;
     border-radius: 0px;
   } 
+  .form input[type="password"]{
+    background: none;
+    display: block;
+    margin-bottom :20px ;
+    color: white;
+    border: none;
+    border-bottom: solid 1px;
+    border-radius: 0px;
+  }  */
   .form button{
     display: block;
     margin :20px auto;
@@ -71,22 +100,7 @@
   .desc {
     margin-right: 100px;
   }
-  /* .form button::after{
-  height: 100%;
-  left: -35%;
-  top: 0;
-  transform: skew(50deg);
-  transition-duration: 0.6s;
-  transform-origin: top left;
-  width: 0;
-  } 
-  .form button:hover{
-    box-shadow: inset -10.5em 0 0 0 #ff96ad, inset 10.5em 0 0 0 #ff96ad;
-  }
-.form button:hover{
-   background: white;
-   box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 200px white;
- } */
+
 
 
   @media only screen and (max-width: 641px){

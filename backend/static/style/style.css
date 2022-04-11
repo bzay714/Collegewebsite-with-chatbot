@@ -12,12 +12,12 @@ body{
 .show {
  display: block;
 }
-
 .display {
   display: none;
 }
 
 .gotopbtn{
+ 
   position: fixed;
   width: 50px;
   height: 50px;
@@ -45,7 +45,7 @@ header{
 }
 header .logo{
   width:115px;
-  height:60px;
+  height:46px;
 }
 
 header .navigation ul {
@@ -64,7 +64,7 @@ header .navigation ul li a{
   text-decoration: none;
 }
 header .navigation ul li a:hover{
-  background:#3F51B5 ;
+  background:#74c043 ;
   color: #ffffff;
 }
 header .navigation ul li ul{
@@ -131,7 +131,7 @@ header .navigation ul li:hover >ul{
 }
 
 .feature-thumb span {
-  background: #3f51b5;
+  background: #74c043;
   border-radius: 50px;
   color: #ffffff;
   font-size: 25px;
@@ -166,7 +166,7 @@ header .navigation ul li:hover >ul{
 }
 
 #about figure span i {
-  background: #3f51b5;
+  background: #74c043;
   border-radius: 50px;
   color: #ffffff;
   font-size: 25px;
@@ -183,7 +183,7 @@ header .navigation ul li:hover >ul{
   width: 450px;
   padding: 40px; 
   text-align: center;
-  border-radius: 50%;
+  border-radius: 5%;
   background-color: #252020;
 }
 .entry-form h2{
@@ -241,16 +241,6 @@ header .navigation ul li:hover >ul{
   text-align: center;
   display: block;
 }
-.regerr{
-  color:white;
-  border: solid red ;
-  border-radius: 20px;
-  background: red ;
-  padding: 10px;
-  margin-left: 70px;
-  text-align: center;
-  display: block;
-}
 
 
 /* register table responsive */
@@ -277,9 +267,7 @@ header .navigation ul li:hover >ul{
   margin-left: auto;
   margin-right: auto;
 }
-#teac p{
-  margin-left: 100px;
-}
+
 
 #teac p b{
   font-size: 30px
@@ -296,6 +284,7 @@ header .navigation ul li:hover >ul{
 footer{
   background-color: #E5E5E5;
 }
+
 
 
 

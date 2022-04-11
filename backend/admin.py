@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Joinus, Bill
+from .models import *
 
 
 
@@ -8,6 +8,7 @@ from .models import Joinus, Bill
 class AdminJoinus(admin.ModelAdmin):
     list_display = ['id','Fullname','Email','Contact']
 
-@admin.register(Bill)
+@admin.register(Student)
 class AdminBill(admin.ModelAdmin):
-    list_display = ['Fullname','StdiD','Amt','Section','Address']
+    list_display = ['Fullname','StdiD','Password','Amt','Section','Address','Email']
+

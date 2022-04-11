@@ -1,19 +1,19 @@
 {"intents": [
     {"tag": "greeting",
      "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
-     "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+     "responses": ["Hello, thanks for visiting do you need any help?", "Hey! Good to see you", "Hi there, how can I help?","Welcome to our college, Do Need any help?"],
      "context_set": ""
     },
     {"tag": "goodbye",
-     "patterns": ["Bye", "See you later", "Goodbye"],
+     "patterns": ["Bye", "See you later", "Goodbye","Bie"],
      "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
     },
     {"tag": "thanks",
-     "patterns": ["Thanks", "Thank you", "That's helpful"],
+     "patterns": ["Thanks", "Thank you", "That's helpful","Thank you for your help"],
      "responses": ["Happy to help!", "Any time!", "My pleasure"]
     },
     {"tag": "location",
-     "patterns": ["Where is it located?", "What is the location?", "Can i know the location?" ],
+     "patterns": ["Where is it located?", "What is the location?", "Can i know the location?","Location Please?" ],
      "responses": ["We're located on San Antonio, TX 78212", "Our location is San Antonio, TX 78212"]
     },
     {"tag": "Document",
@@ -25,7 +25,7 @@
      "responses": ["We're open every day from 9am-9pm except saturday", "Our hours are 9am-9pm every day excluding saturday", "We are open 9am to 9 pm every week days"]
     },
     {"tag": "admission",
-        "patterns": ["Are you taking admission?", "How can I register for my sit?", "Can I reserve a sit for admission?"],
+        "patterns": ["Are you taking admission?", "How can I register for my sit?", "Can I reserve a sit for admission?", "Can i know how to register?"],
         "responses": ["You can register from the form provided on home page.", "Please register using the form provided on home page.", "Limited sit avilable register using the registration form we will contact you soon."]
     },
     {"tag": "introduction",
