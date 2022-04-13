@@ -17,6 +17,7 @@ from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -53,21 +54,41 @@ def bit(request):
 
 def inquiry(request):
     if request.method=="POST":
-        # print("aaaa")
-        StdiD=request.POST['StudentId']
-        # print(StdiD)
-        St=Bill.objects.filter(StdiD=StdiD)
-        if len(St) != 0:
-            print(StdiD)
-            return HttpResponseRedirect('/info/'+StdiD+'/')
-            # return HttpResponse("k xa")
-        else:
-            messages.error(request, "Student ID not found")
-            return HttpResponseRedirect("/inquiry/")
+        if 'inquiry' in request.POST:
+            StdiD=request.POST['StudentId']
+            Password=request.POST['Password']
+            St=Student.objects.filter(StdiD=StdiD)
+            if len(St) != 0:
+                print(StdiD)
+                print(Password)
+                authpass=Student.objects.filter(Password=Password)
+                if authpass:
+                    return HttpResponseRedirect('/info/'+StdiD+'/')
+                else:
+                    messages.error(request, "Student ID Password doesnot match")
+                # return HttpResponse("k xa")
+            else:
+                messages.error(request, "Student ID not found")
+                return HttpResponseRedirect("/inquiry/")
+        if 'update' in request.POST:
+            if request.method=='POST':
+                StdiD=request.POST['stid']
+                pass_ = Student.objects.get(StdiD = StdiD)
+                Current_Password=request.POST['currentpass']
+                if (pass_.Password==Current_Password):
+                    newpass=request.POST['newpass']
+                    newpass1=request.POST['newpass1']
+                    if Password==Password and newpass==newpass1:
+                        data = Student.objects.filter(StdiD=StdiD).update(Password=newpass1)
+                        data.save()
+                    else:
+                        messages.error(request, "Password doesnot match")
+                else:
+                    messages.error(request, "Password doesnot match")
     return render(request, "khalti.html")
 
 def info(request,id):
-    information=Bill.objects.get(StdiD=id)
+    information=Student.objects.get(StdiD=id)
     return render(request, "info.html",{"info":information})
 # def index_page(request):
 #     price = 27000
@@ -177,10 +198,40 @@ print("HI! How may I help you!")
 def receiveMessage(request):
     print(json.loads(request.body)['message'])
     res = 'nothing'
-    
     message=json.loads(request.body)['message']
     ints=predict_class(message)
     res=get_response(ints, intents)
     print(res)
-
     return JsonResponse({"status":res})
+
+# def changePassword(request, id):
+#     if request.method == "POST":
+#         pk=Bill.objects.get(pk=id)
+#         form=MenuForm(request.POST,instance=pk)
+#         if form.is_valid():
+#             form.save()
+#             return HttpResponseRedirect("/Bill/")
+#     else:
+#         pk=Menu.objects.get(pk=id)
+#         form=MenuForm(instance=pk)
+#         return render(request , "menuupdate.html",{'form':form})
+
+
+
+# def changepass(request):
+#     if request.method == "POST":
+#         stid=request.POST['stid']
+#         currentpass=request.POST['currentpass']
+#         password=request.POST['newpass']
+#         repassword=request.POST['newpass1']
+#         # fm=PasswordChangeForm(user=request.user, date=request)
+#         # if fm.is_valid():
+#         #     fm.save()
+#         #     return HttpResponse('/info/')
+#         # else:
+#         #     fm=PasswordChangeForm(user=request.user)  
+#         # return render (request, "khalti.html",{"form":fm})
+#         print(stid)
+#         print(currentpass)
+#         print(password)
+#         print(repassword)

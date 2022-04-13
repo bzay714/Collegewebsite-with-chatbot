@@ -67,8 +67,11 @@
                          <label for=""> Password</label>
                          <input type="password" name="Password" class="form-control" required="">
                          <div class='d-flex'>
-                         <button type="submit">Inquiry</button>
-                         <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Update Password</button>
+                         <button type="submit" name="inquiry">Inquiry</button>
+                         <a data-bs-toggle="modal" data-bs-target="#exampleModal">Update Password</a>
+                         </div>
+                        </form> 
+                         
                         
                          <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -80,27 +83,28 @@
       <div class="modal-body">
         
         <form action='' method='POST' novalidate>
-        <!--  {% csrf_token %}
-        {{form.as_p}}
+        {% csrf_token %}
+  
         <label for="">Student ID</label>
-        <input type="text" name="stid" class="form-control" required="">
+        <input type="text" name="stid" class="form-control" required>
         <label for="">Current password</label>
-        <input type="password" name="currentpass" class="form-control" required="">
+        <input type="password" name="currentpass" class="form-control" required>
         <label for="">New password</label>
-        <input type="password" name="newpass" class="form-control" required=""> 
+        <input type="password" name="newpass" class="form-control" required> 
         <label for="">Retype your Password</label>
-        <input type="password" name="newpass2" class="form-control" required=""> 
-        </form>-->
+        <input type="password" name="newpass2" class="form-control" required> 
+        <div class="modal-footer">
+          <button type="button" data-bs-dismiss="modal">Close</button>
+          <input class = "contb"type="submit" value="Update password" name="update">
+        </div>
+        </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" data-bs-dismiss="modal">Close</button>
-        <button type="button" >Update password</button>
-      </div>
+      
     </div>
   </div>
 </div>
                         </div>
-                    </form> 
+                    
                   {% for msg in  messages %} <span class="bg-danger p-3 text-white rounded text-center">{{msg}}</span> {% endfor %}  
             </div>
         </div>

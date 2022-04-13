@@ -90,13 +90,11 @@
 	opacity: 1;
   }
   
- /* .response{
-	padding: 10px; 
-	background-color: #7CB7D9;
-	color: #fff;
-	border-radius: 20px;
- } */
-  .response span{
+.response{
+	overflow: auto;
+	max-height: 200px
+ } 
+.response span{
 	padding: 10px; 
 	margin-left: 10px;
 	background-color: #DADADA;
