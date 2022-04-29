@@ -5,8 +5,8 @@ html{
 body{
   font-family: TimesNewRoman;
 }
-
-.hide {
+/* Go top button */
+/* .hide {
   display: none;
 }
 .show {
@@ -14,9 +14,9 @@ body{
 }
 .display {
   display: none;
-}
+} */
 
-.gotopbtn{
+/* .gotopbtn{
  
   position: fixed;
   width: 50px;
@@ -29,7 +29,7 @@ body{
   line-height: 50px;
   color: black;
   font-size: 22px;
-}
+} */
 
 /* nav */
 header{
@@ -41,7 +41,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
+  z-index: 1;
 }
 header .logo{
   width:115px;
@@ -109,6 +109,7 @@ header .navigation ul li:hover >ul{
 .m{
   margin-bottom: 100px;
 }
+
 /* class information */
 .clsinf h1{
   font-size: 40px;
@@ -122,6 +123,7 @@ header .navigation ul li:hover >ul{
 .clsinf img{
   width: 100%;
 }
+
 /* body */
 
 .feature-thumb {
@@ -191,26 +193,16 @@ header .navigation ul li:hover >ul{
   font-size: 2em;
   padding-bottom: 10px;
 }
-.entry-form input[type="text"]{
+.entry-form input{
   background: none;
   display: block;
-  margin :20px auto;
+  margin:20px auto;
   padding: 14px 10px;
-  color: #555;
+  color: white;
   border: none;
   border-bottom: solid 1px;
   border-radius: 0px;
 }
-.entry-form input[type="email"]{
-  background: none;
-  display: block;
-  margin :20px auto;
-  padding: 14px 10px;
-  color: #555;
-  border: none;
-  border-bottom: solid 1px;
-  border-radius: 0px;
-} 
 .entry-form button{
   background: none;
   display: block;
@@ -225,8 +217,7 @@ header .navigation ul li:hover >ul{
   cursor: pointer;
 }
 
-/* message */
-
+/* message register form */
 .messages li{
   text-decoration: none !important;
   width: fit-content;

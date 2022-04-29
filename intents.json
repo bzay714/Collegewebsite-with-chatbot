@@ -1,7 +1,7 @@
 {"intents": [
     {"tag": "greeting",
-     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
-     "responses": ["Hello, thanks for visiting do you need any help?", "Hey! Good to see you", "Hi there, how can I help?","Welcome to our college, Do Need any help?"],
+     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day","good morning"],
+     "responses": ["Hello, thanks for visiting do you need any help?", "Hey! Good to see you", "Hi there, how can I help?","Hello, Welcome to our college, Do Need any help?"],
      "context_set": ""
     },
     {"tag": "goodbye",
@@ -31,6 +31,14 @@
     {"tag": "introduction",
         "patterns": ["Who am i talking to?", "Who are you?", "What are you?"],
         "responses": ["I'm a chatbot created for your help.", "I'm chatbot created to guid you.", "I'm trinity Boy."]
+    },
+    {"tag": "normal",
+        "patterns": ["How are you?"],
+        "responses": ["I'm fine thankyou.", "All good, what about you?", "They are taking good care of me."]
+    },
+    {"tag": "payments",
+        "patterns": ["How can I pay?", "What are the payment method you accept?", "Can I pay online?"],
+        "responses": ["We accept Khalti payment", "You can check you bill from the page Bill and pay through Khalti"]
     }
 ]
 }

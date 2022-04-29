@@ -18,6 +18,10 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login
+
+
 
 # Create your views here.
 
@@ -52,6 +56,7 @@ def bba(request):
 def bit(request):
     return render(request, 'BIT.html')
 
+
 def inquiry(request):
     if request.method=="POST":
         if 'inquiry' in request.POST:
@@ -63,7 +68,13 @@ def inquiry(request):
                 print(Password)
                 authpass=Student.objects.filter(Password=Password)
                 if authpass:
-                    return HttpResponseRedirect('/info/'+StdiD+'/')
+                    if (Password!=StdiD):
+                        user = authenticate(username=StdiD, password=Password)
+                        if user is not None:
+                            login(request, user)
+                            return HttpResponseRedirect('/info/'+StdiD+'/')
+                    else:
+                        messages.error(request, "Please update your password")
                 else:
                     messages.error(request, "Student ID Password doesnot match")
                 # return HttpResponse("k xa")
@@ -78,15 +89,22 @@ def inquiry(request):
                 if (pass_.Password==Current_Password):
                     newpass=request.POST['newpass']
                     newpass1=request.POST['newpass1']
-                    if Password==Password and newpass==newpass1:
-                        data = Student.objects.filter(StdiD=StdiD).update(Password=newpass1)
+                    if newpass==newpass1:
+                        data = Student.objects.get(StdiD=StdiD)
+                        data.Password = newpass
+                        print(data)
+                        print(StdiD)
+                        print("new",Current_Password)
                         data.save()
+                        user = User.objects.create_user(StdiD, data.Email, newpass)
+                        user.save()
                     else:
                         messages.error(request, "Password doesnot match")
                 else:
                     messages.error(request, "Password doesnot match")
     return render(request, "khalti.html")
 
+@login_required
 def info(request,id):
     information=Student.objects.get(StdiD=id)
     return render(request, "info.html",{"info":information})
@@ -125,24 +143,6 @@ def khalti(request):
    pp.pprint(response_data)
    
    return JsonResponse(f"Payment Success !! . {response_data['user']['idx']}",safe=False)
-
-
-# def login(request):
-#     return render(request, "login_temp.html")
-
-
-# def registration(request):
-#     data=Joinus.objects.all()
-#     return render(request , "registration.html",{'data':data})
-
-# def deleteReg(request,id):
-#     if request.method =="POST":
-#         regId = Joinus.objects.get(pk=id)
-#         regId.delete()
-#         messages.error(request, "Successfully Deleted")
-#         return HttpResponseRedirect("/register/")
-
-
 
 
 lemmatizer = WordNetLemmatizer()
